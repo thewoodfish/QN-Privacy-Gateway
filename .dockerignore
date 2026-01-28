@@ -1,0 +1,36 @@
+# Git
+.git
+.gitignore
+.github
+
+# Rust build artifacts
+target/
+**/*.rs.bk
+*.pdb
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Documentation
+*.md
+!README.md
+LICENSE
+
+# CI/CD
+.github/
+
+# Logs
+*.log
+
+# Other
+.DS_Store
+demo.sh

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QN Privacy Gateway // Terminal Monitor</title>
+  <link rel="stylesheet" href="/assets/dashboard.css" />
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="noise"></div>
+  <header class="topbar">
+    <div class="title">QN PRIVACY GATEWAY // TERMINAL MONITOR</div>
+    <div class="status">
+      <span class="label">MODE</span>
+      <span id="mode" class="chip">{{PRIVACY_MODE}}</span>
+      <span class="label">STATUS</span>
+      <span id="status-light" class="status-light"></span>
+      <span id="status-text" class="status-text">DISCONNECTED</span>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="left">
+      <div class="card">
+        <div class="card-label">REQUESTS</div>
+        <div id="metric-requests" class="card-value">0</div>
+      </div>
+      <div class="card">
+        <div class="card-label">UNIQUE HASHES</div>
+        <div id="metric-unique" class="card-value">0</div>
+      </div>
+      <div class="card">
+        <div class="card-label">CACHE HIT RATIO</div>
+        <div id="metric-hit-ratio" class="card-value">0%</div>
+      </div>
+      <div class="card">
+        <div class="card-label">LAST LATENCY</div>
+        <div id="metric-latency" class="card-value">-</div>
+      </div>
+      <div class="card">
+        <div class="card-label">P95 LATENCY</div>
+        <div id="metric-p95" class="card-value">-</div>
+      </div>
+    </section>
+
+    <section class="right">
+      <div class="terminal-header">
+        <span>LIVE LOG STREAM</span>
+        <span id="scroll-lock" class="scroll-lock">SCROLL LOCK</span>
+      </div>
+      <div id="terminal" class="terminal"></div>
+    </section>
+  </main>
+
+  <footer class="bottombar">
+    <div class="filters">
+      <label><input type="checkbox" id="filter-info" checked /> INFO</label>
+      <label><input type="checkbox" id="filter-warn" checked /> WARN</label>
+      <label><input type="checkbox" id="filter-error" checked /> ERROR</label>
+      <input type="text" id="filter-method" placeholder="Filter method" />
+      <input type="text" id="filter-hash" placeholder="Filter hash" />
+    </div>
+    <div class="controls">
+      <button id="pause-btn">PAUSE</button>
+      <button id="clear-btn">CLEAR</button>
+    </div>
+  </footer>
+
+  <script src="/assets/dashboard.js"></script>
+</body>
+</html>
