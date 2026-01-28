@@ -157,8 +157,7 @@ Open the retro CRT-style dashboard at `http://localhost:8080/dashboard` to view:
 - 🔍 Request hash and method filtering
 - 🎨 Beautiful retro terminal aesthetic
 
-![Dashboard Preview](assets/dashboard-preview.png)
-*Retro CRT-style monitoring dashboard with live logs and metrics*
+> **Note**: Start the gateway and visit `http://localhost:8080/dashboard` to see the live retro CRT dashboard in action!
 
 ## ⚙️ Configuration
 
